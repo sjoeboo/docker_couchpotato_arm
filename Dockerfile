@@ -2,7 +2,7 @@ FROM resin/armv7hf-debian
 
 RUN [ "cross-build-start" ]
 
-RUN apt-get update && apt-get install libssl-dev gcc libffi-dev python-openssl python-dev python-pip python-cheetah python-lxml wget && rm -rf /var/lib/apt/lists/* && pip install setuptools --upgrade && pip install pyopenssl --upgrade 
+RUN apt-get update && apt-get install libssl-dev gcc libffi-dev python-openssl python-dev python-pip python-cheetah python-lxml wget && rm -rf /var/lib/apt/lists/* && pip install setuptools --upgrade && pip install pyopenssl --upgrade && pip install enum 
 
 RUN wget --no-check-certificate https://github.com/CouchPotato/CouchPotatoServer/tarball/master -O couchpotato.tar.gz && tar -xzvf couchpotato.tar.gz && mv CouchPotato-CouchPotatoServer-* CouchPotato
 
